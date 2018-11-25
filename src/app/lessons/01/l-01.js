@@ -42,10 +42,10 @@ var myObject = {
 };
 
 // Array
-var myArray = [1,2,3,4,5, 'a string', true, { name: 'My Name'}];
+var myArray = [1, 2, 3, 4, 5, 'a string', true, {name: 'My Name'}];
 
 // Function
-function myFunction (parameter) {
+function myFunction(parameter) {
     var myLocalVar = parameter;
     return myLocalVar * 2;
 }
@@ -62,7 +62,7 @@ var today = new Date(); //
 // TODO ROST: Tell maximum size of Object and
 // max children count for object.
 
-function myFunction (parameter) {
+function myFunction(parameter) {
     var myLocalVar = parameter;
     return myLocalVar * 2;
 }
@@ -166,7 +166,7 @@ var foo = 'bar';
 // Ця властивість дає взнати довжину рядка (кількість символів):
 
 var fooLength = foo.length; // 3
-var lastChar = foo.charAt( fooLength - 1);
+var lastChar = foo.charAt(fooLength - 1);
 
 //
 // Функції для роботи з рядками:
@@ -196,10 +196,10 @@ foo.charAt(2); // 'r'
 // 1. Повертає номер під-рядка у рядку, починаючи пошук з startIndex
 // 2. Повертає -1, якщо символ не знайдено.
 
-foo.indexOf( 'a' ); // 1
+foo.indexOf('a'); // 1
 
 var foo4 = 'bara';
-foo4.indexOf( 'a', 2 ); // 3 - знайшли друге 'а', бо почали пошук з індексу 2
+foo4.indexOf('a', 2); // 3 - знайшли друге 'а', бо почали пошук з індексу 2
 
 //
 // String.substring( [startIndex] [, endIndex] );
@@ -209,11 +209,11 @@ foo4.indexOf( 'a', 2 ); // 3 - знайшли друге 'а', бо почали
 // не включаючи endIndex, або до кінця рядка, якщо endIndex не вказано.
 
 var helloWorld = 'Hello World!';
-helloWorld.substring( 6 ); // 'World!'
-helloWorld.substring( 6, 7 ); // 'W'
-helloWorld.substring( 6, 8 ); // 'Wo'
-helloWorld.substring( 6, 9 ); // 'Wor'
-helloWorld.substring( 6, 90 ); // 'World!'
+helloWorld.substring(6); // 'World!'
+helloWorld.substring(6, 7); // 'W'
+helloWorld.substring(6, 8); // 'Wo'
+helloWorld.substring(6, 9); // 'Wor'
+helloWorld.substring(6, 90); // 'World!'
 
 //
 // String.substr( startIndex [, quantity] );
@@ -221,10 +221,10 @@ helloWorld.substring( 6, 90 ); // 'World!'
 // - поверне під-рядок, починаючи з позиції startIndex і у кількості quantity
 // (або до кінця рядка, якщо quantity не вказано).
 
-helloWorld.substr( 6 ); // 'World!'
-helloWorld.substr( 6, 1 ); // 'W'
-helloWorld.substr( 6, 2 ); // 'Wo'
-helloWorld.substr( 6, 3 ); // 'Wor'
+helloWorld.substr(6); // 'World!'
+helloWorld.substr(6, 1); // 'W'
+helloWorld.substr(6, 2); // 'Wo'
+helloWorld.substr(6, 3); // 'Wor'
 
 //
 // Перетворення чисел у рядки і навпаки.
@@ -265,9 +265,9 @@ var n2 = numAsString + 1; // !!! '1001'
 var numAsStringBinary = num.toString(2); // 1100100
 
 var ten = 10;
-var tenInDecimalSysten = ten.toString( 10 );        // результат: "10"
-var tenInBinarySystem = ten.toString( 2 );          // результат: "1010"
-var tenInHexadecimalSystem = ten.toString( 16 );    // результат: "a"
+var tenInDecimalSysten = ten.toString(10);        // результат: "10"
+var tenInBinarySystem = ten.toString(2);          // результат: "1010"
+var tenInHexadecimalSystem = ten.toString(16);    // результат: "a"
 
 //
 // Зворотнє перетворення: з рядка у число: parseInt( value, radix )
@@ -331,8 +331,8 @@ var infinity = 100 / 0; // Результат: Infinity
 // - не плутати з глобальною функцією isNaN().
 
 // Функція Number.isNaN() перевіряє виключно на рівність з спеціальним значенням Number.NaN, тому:
-var isNaNIsNaN = Number.isNaN( Number.NaN ); // true - Number.NaN є єдиним значенням, яке дасть true
-var tenIsNaN = Number.isNaN( 10 ); // false - усі інші значення дають false
+var isNaNIsNaN = Number.isNaN(Number.NaN); // true - Number.NaN є єдиним значенням, яке дасть true
+var tenIsNaN = Number.isNaN(10); // false - усі інші значення дають false
 
 // Глобальна функція isNaN() перевіряє, чи є її аргумент числом:
 var globalNumberIsNaN = isNaN(10); // false
@@ -371,7 +371,7 @@ var lesson = {
     name: 'Lesson 01 - Data Types (continued)',
     id: 2,
     folder: null,
-    checkHomework: function ( students ) {
+    checkHomework: function (students) {
         // body...
     }
 };
@@ -399,6 +399,6 @@ console.log('\nLesson 01 - Homework:\n\n!!! Please answer the questions in this 
 // Task 01.05 - 3 points
 // Q: Please write a function which calculates the difference between two numbers
 // A:
-let calcDiff = (a, b) => a-b;
+let calcDiff = (a, b) => a - b;
 
 // Lesson 01 Homework - End
