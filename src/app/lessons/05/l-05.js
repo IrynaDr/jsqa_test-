@@ -542,7 +542,8 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 2. var b = 10;
 // 3. const c = "20";
 // 4. d = function(){};
-// 
+//
+//A: 4
 // 
 // 05.02.2 Створи змінні наступних типів. Для тих типів, де це неможливо, напиши коментар "Типу не існує"
 // 
@@ -553,7 +554,9 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 5. boolean
 // 6. interface
 // 7. undefined
-// 
+//
+var name = 'Andrii';
+
 // 
 // 05.02.3 Знайди тут оператор строгого порівняння та випишіть його:
 // 
@@ -562,21 +565,24 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 3. &&
 // 4. ===
 // 5. EQ
-// 
-// 
+//
+//A:  ===
+//
 // 05.02.4 Який з цих виразів є помилковим?
 // 
 // 1. x * y == z
 // 2. x + y = z
 // 3. x = y + (z = i / (k = m * n))
-// 
+//
+//A: 3
 // 
 // 05.02.5 Який з цих операторів означає "логічне АБО"?
 // 
 // 1. ||
 // 2. OR
 // 3. |
-// 
+//
+//A: ||
 // 
 // 05.02.6 Який з цих операторів означає "логічне ТА"?
 // 
@@ -584,12 +590,13 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 2. and
 // 3. &&
 // 4. &
-// 
+//
+//A: &&
 // 
 // 05.02.7 Чи правда, що оператор ‘typeof’ використовується для:
 // 
-// 1. Отримання назви типу?
-// 2. Отримання посилання на констуктор?
+// 1. Отримання назви типу? true
+// 2. Отримання посилання на констуктор? true
 // 
 // 
 // 05.02.8 Які з цих прикладів є невірним використанням оператора умовного присвоєння?
@@ -598,7 +605,7 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 2. var y = x : z ? m;
 // 3. var y = x ? z : m;
 // 
-// 
+// A: 2
 // 
 // 05.02.9 Де тут — правильний функціональний вираз?
 // 
@@ -607,7 +614,7 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 3. var z = new Function('argument', '// TODO')
 // 4. var y = function(){}
 // 
-// 
+// A: 4
 // 
 // 05.02.10 Де конкатенація рядків зроблена з помилкою?
 // 
@@ -615,6 +622,8 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 2. "str1" ~ "str2"
 // 3. "str1".concat("str2")
 // 3. String.concat("str1", "str2")
+
+//A: 2
 
 console.h1('Task 05.03');
 
