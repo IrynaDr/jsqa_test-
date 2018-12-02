@@ -206,29 +206,52 @@ console.log(student.name); // 'name_value'
 
 console.log('\nLesson 03 - Homework');
 
+// const lesson = {
+//     name: 'Lesson 03 - Data Types (continued)',
+//     id: 3,
+//     folder: null,
+//     checkHomework: function (students) {
+//         // TODO
+//     }
+// };
+
+
 console.log('\nTask 03.01:');
 // Task 03.01
 // Points: 2
 // In code above, we created 'lesson' object. Add 'date' property to it, having null value.
-// TODO: write code here
+
+lesson['date'] = null;
+
 
 console.log('\nTask 03.02');
 // Task 03.02
 // Points: 3
 // Add getInfo method to the lesson object, it should log lesson info to the console: lesson name, id and date.
-// TODO: write code here
+
+lesson.getInfo = function () {
+    console.log('Lesson name: ' + this.name);
+    console.log('ID: ' + this.id);
+    console.log('Date: ' + this.date);
+}
 
 console.log('\nTask 03.03');
 // Task 03.03
 // Points: 2
 // In code above, we defined the 'student' object. 
 // Add 'birthday' property to it, set it's value to new Date(1991,8,24);
-// TODO: write code here
+
+student.birthday = new Date (1991,8,24);
 
 console.log('\nTask 03.04: TODO: Review this file and make sure you understand it.');
 // Task 03.04
 // Points: 1
 // TODO: if you performed this task, please uncomment next line:
-// console.log('I\'ve reviewed the l-03.js file and I understand it');
+ console.log('I\'ve reviewed the l-03.js file and I understand it');
 
 console.log('\nLesson 03 - Homework End.');
+
+console.log(lesson.getInfo());
+console.log(Object.keys(student));
+
+console.log('birthday: ' + student.birthday);
