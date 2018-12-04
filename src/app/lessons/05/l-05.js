@@ -353,6 +353,7 @@ console.h1('Tree constructor'); // просто заголовок
 
 function Tree(name) {
 	this.name = name;
+	console.log(name);
 }
 
 var theTree = new Tree('Redwood');
@@ -521,9 +522,22 @@ console.h1('Task 05.01');
 // Вище визначено об'єкт 'student'. Знайди серед його властивостей ту,
 // для надання початкового значення якої використано конструктор.
 // Запиши її назву у нову глобальну змінну 'createdByConstructor'.
-// TODO: пиши свій код тут:
 
-let createdByConstructor;
+
+let createdByConstructor = 'birthdayDate';
+
+// function filter (variable){
+//     for (let props in student) {
+//         if (student.isPrototypeOf(props)){
+//          let  variable = props
+// 		};
+//     }
+//     console.log(createdByConstructor);
+// }
+//
+// console.log(createdByConstructor);
+//
+// console.log(Object.isPrototypeOf(student.birthdayDate));
 
 if (createdByConstructor && createdByConstructor === 'birthdayDate') {
 	console.log('\n\tThanks! This task is done');
@@ -547,16 +561,14 @@ console.log('\n\tPlease implement this task and few tests to check it');
 // 
 // 05.02.2 Створи змінні наступних типів. Для тих типів, де це неможливо, напиши коментар "Типу не існує"
 // 
-// 1. string
+// 1. string = ' ';
 // 2. char
-// 3. int
-// 4. float
-// 5. boolean
+// 3. int = 4;
+// 4. float = 0.001;
+// 5. boolean = true;
 // 6. interface
-// 7. undefined
+// 7. undefined;
 //
-var name = 'Andrii';
-
 // 
 // 05.02.3 Знайди тут оператор строгого порівняння та випишіть його:
 // 
