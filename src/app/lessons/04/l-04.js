@@ -413,7 +413,7 @@ var c = a.filter(function(element,index) {
 // Ці два методи повертають не масив, а true або false.
 
 // every() повертає істину тоді і тільки тоді, коли колбек-функція 
-// повернула true після всіх викликів дял кожного елемента.
+// повернула true після всіх викликів для кожного елемента.
 
 var ar = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 var everyArrayElementIsLessThanTen = ar.every(function(value) {
@@ -527,58 +527,55 @@ console.log('\nTask 04.01');
 // Points: 1
 // Прочитай файл уроку. Створи новий масив primeNumbers, що складається з перших десяти простих чисел. 
 // Використай метод push, щоб додати до масиву ще одне просте число.
-// TODO: пиши код тут:
-
-let primeNumbers;
-
+let primeNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+primeNumbers.push(31);
 // Цей код тестує завдання:
-if (primeNumbers && primeNumbers.length === 10) {
+if (primeNumbers && primeNumbers.length === 11) {
 	console.log('Task 04.01 is DONE! ');
 } else {
 	console.log('Please make Task 04.01');
 }
 
-
-
-console.log('\nTask 04.02'); 
+console.log('\nTask 04.02');
 // Points: 2
 // Напиши функцію sortNumbers і використай її у методі sort масиву primeNumbers для того, 
 // щоб відсортувати його елементи у зворотньому порядку.
-// TODO: пиши код тут:
+var sortNumbers = function (a, b){
+	return b - a;
+}
+primeNumbers.sort(sortNumbers);
+console.log(primeNumbers);
 // Цей код тестує завдання:
-if (primeNumbers && primeNumbers[0] && primeNumbers[0] === 29) {
+if (primeNumbers && primeNumbers[0] && primeNumbers[0] === 31) {
 	console.log('Task 04.02 is DONE! ');
 } else {
 	console.log('Please make Task 04.02');
 }
 
-
-
-
-
-console.log('\nTask 04.03'); 
+console.log('\nTask 04.03');
 // Points: 2
 // За допомогою методу splice виріж з масиву елементи з другого по третій і при цьому заміни їх на рядок 'foo'.
-// TODO: пиши код тут:
+primeNumbers.splice(2,3, 'foo');
+console.log(primeNumbers);
+
+
 if (primeNumbers && primeNumbers[2] === 'foo') {
 	console.log('Task 04.03 is DONE! ');
 } else {
 	console.log('Please make Task 04.03');
 }
 
-
-
-
-
 console.log('\nTask 04.04');
 // Points: 2 
-// Використай метод Array.forEach для того, 
+// Використай метод Array.forEach для того,
 // щоб додати до кожного елементу масиву [21, 63, 84] число '42'
-// TODO: пиши свій код тут:
-console.log('Please make Task 04.04');
-
-
-
+var numbers = [21, 63, 84];
+primeNumbers.forEach(function (value, i) {
+    if (numbers.includes(value)){
+        primeNumbers[i]+= 42;
+	}
+})
+console.log('Task 04.04 is DONE! \n');
 
 
 console.log('\nTask 04.05');
@@ -589,13 +586,17 @@ var crazyMix = [1, '1', true, 2, '02', 3, '0', '10', 11, [], {}, function() {}];
 // Використай метод Array.filter у функції arrayCleanUp так,
 // щоб вона повертала масив, до якого входять тільки числа з вхідного масиву 'arrayToCleanUp':
 
-function arrayCleanUp(arrayToCleanUp) {
-	var cleanedUp = arrayToCleanUp;
-	// TODO: пиши свій код тут:
-	return cleanedUp;
+
+let condition = value =>  typeof value  === 'number' && value > 3;
+
+function arrayCleanUp(arrayToCleanUp, condition) {
+    return arrayToCleanUp.filter(condition)
 }
 
-var cleanedUp = arrayCleanUp(crazyMix).every(function(element) {
+
+console.log(arrayCleanUp(crazyMix,condition));
+
+var cleanedUp = arrayCleanUp(crazyMix, condition).every(function(element) {
 	return typeof element === 'number';
 });
 
@@ -619,10 +620,20 @@ var matrix = [
 	[4, 5, 29, 3],
 	[2, 12, 4, 7]
 ];
+let maxCond = function (x, y) {
+    return (x > y) ? x : y;
+
+}
 
 function findMaxInMatrix(mtx) {
-	// TODO: пиши свій код тут:
+   return  mtx.map(arr => {
+    	return arr.reduce(maxCond)
+		}
+	).reduce(maxCond);
 }
+
+
+
 
 var res = findMaxInMatrix(matrix);
 
