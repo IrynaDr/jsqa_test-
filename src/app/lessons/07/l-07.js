@@ -275,20 +275,23 @@
 		return function func1InternalFunc() {}
 	}
 
-	// TODO: дай відповідь тут:
+	// second
 
 	console.log('\nTask 07.02');
 	console.log('\n\t Please implement this task');
 
 	// Points: 1
 	// Напиши функцію-замикання -- будь-яку.
-	// TODO: пиши код тут:
 
-	function sillyClosure() {
-		return this;
+	function main (first) {
+        return function sillyClosure(second) {
+            return  first + second;
+        }
 	}
 
-	console.log(sillyClosure())
+
+
+	console.log(sillyClosure(7)(2))
 
 	console.log('\nTask 07.03');
 	console.log('\n\t Please implement this task');
@@ -345,7 +348,8 @@
 	// Напиши функцію, до внутрішньої змінної якої можна
 	// отримати доступ через внутрішню функцію,
 	// що повертається як функція-замикання.
-	// TODO: пиши тут:
+
+
 
 	function iAmClosureFour() {
 		var iAmEnclosed = {
@@ -362,6 +366,9 @@
 
 	var accessEnclosed = iAmClosureFour();
 	var disclosedInternalFour = accessEnclosed();
+
+
+
 
 })();
 // Завершення глобальної анонімної функції
