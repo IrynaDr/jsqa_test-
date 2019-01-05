@@ -414,28 +414,88 @@
     // Points: 2
     // Напиши функцію useAnonymousCallback, що приймає параметр callback, і виклич її, 
     // передавши анонімну функцію в якості параметра.
-    // TODO: пиши тут:
+
+
+
+    let useAnonymousCallback = function (callback) {
+         callback();
+    };
+    let anon = function () {
+         console.log('hi i am Iryna')
+    }
+
+
+   useAnonymousCallback(anon);
+
+
 
     console.log('Please implement this task');
-
     console.log('\nTask 08.02');
     // Points: 2
     // Напиши функцію useAnonymousCallback, що приймає параметр callback, і виклич її, 
     // передавши їй в якості параметра іменовану функцію.
 
-    console.log('Please implement this task');
-    
+    let useAnonymousCallback2 = function (callback2) {
+        callback2();
+    };
+    function hasName() {
+        console.log("Bye bye see you later");
+    }
+     useAnonymousCallback2(hasName);
 
+
+
+    console.log('Please implement this task');
     console.log('\nTask 08.03');
     // Points: 3
     // Напиши функцію workingCallback, що приймає у якості параметра іменовану функцію
     // і викликає її, передаючи їй у якості параметра свою внутрішню змінну enclosed.
     // Напиши код, що використовує цю конструкцію для того, щоб вивести у консоль
     // значення змінної enclosed через замикання.
-    // TODO: пиши тут:
 
-    console.log('Please implement this task');    
 
+    function workingCallback() {
+        let enclosed = 5;
+        return function result(enclosed) {
+            return console.log(enclosed);
+        }
+
+    }
+
+    let resEx = workingCallback();
+    console.log(resEx);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    function result (param){
+        console.log('Value from closure:',param)
+    }
+
+    function workingCallback(imFunc) {
+        let enclosed = 5;
+        return function () {
+            imFunc(enclosed);
+        }
+    }
+
+    let exec = workingCallback(result);
+    exec();
+
+
+    console.log('Please implement this task');
     console.h1('Lesson 08 - Homework End');
 
 })();
