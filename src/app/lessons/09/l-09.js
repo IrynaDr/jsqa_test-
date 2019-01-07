@@ -215,20 +215,42 @@
     // Вище у цьому файлі за допомогою функції JSQA_APP.namespace() глобальний об'єкт JSQA_APP наповнено внутрішніми просторами імен
     // Виведи у консоль значення об'єкта JSQA_APP і проаналізуй побачене. Чи розумієш ти, як утворилася такка структура?
 
+    console.log(JSQA_APP);
+
+
+
+
     console.h2('Task 09.02');
     console.log('Please implement this task');
     // Points: 2
     // За допомогою вже згаданого методу JSQA_APP.namespace() створи новий модуль 'mainModule' в JSQA_APP за таким шляхом:
     // JSQA_APP.modules.mainModule
     // Знову виведи у консоль значення об'єкта JSQA_APP і переконайся, що новий модуль з'явився у об'єкті
-    // Tip: для зручності і краси, можна виводити так: 
-    // console.log(JSON.stringify(JSQA_APP, null, '  '));
+    // Tip: для зручності і краси, можна виводити так:
+
+    JSQA_APP.modules.mainModule = {};
+
+    console.log(JSON.stringify(JSQA_APP, null, '  '));
 
     console.h2('Task 09.03');
     console.log('Please implement this task');
     // Points: 3
     // Користуючись прикладом шаблону "Приватні властивості і методи" вище, створи новий об'єкт student з приватною властивіcтю id,
     // що буде доступною тільки для читання через публічний метод getId()
+    let student = {};
+    const studObj = (function (){
+        student = {id: 12};
+        return{
+            getId: function(){
+                student.id;
+                console.log('Student ID is: ' + student.id);
+            }
+        }
+    }());
+
+    let resaltSt = studObj.getId();
+
+    console.log(resaltSt);
 
     console.h2('Task 09.04');
     console.log('Please implement this task');
@@ -239,3 +261,15 @@
     console.h1('Lesson 09 - Homework End');
 
 })();
+    let moduleSt = (function () {
+    student.analyzeHomeworkTask = function (homework_id){
+        console.log('Proccesing homework #' + homework_id);
+    }
+    return {
+        doHomework : function (homework_id){
+            analyzeHomeworkTask();
+        }
+    }
+}());
+
+moduleSt.doHomework(resaltSt);
