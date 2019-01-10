@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="85702fd6-a5c1-400b-9eb0-9f07518795e9" name="Default" comment="">
+    <list default="true" id="85702fd6-a5c1-400b-9eb0-9f07518795e9" name="Default" comment="added idea file to git ignore">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -363,7 +363,7 @@
       <workItem from="1546984387142" duration="8162000" />
       <workItem from="1547132250866" duration="640000" />
       <workItem from="1547133341625" duration="49000" />
-      <workItem from="1547133393779" duration="101000" />
+      <workItem from="1547133393779" duration="125000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit">
       <created>1543170185195</created>
@@ -495,7 +495,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="53086000" />
+    <option name="totallyTimeSpent" value="53110000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="816" extended-state="6" />
