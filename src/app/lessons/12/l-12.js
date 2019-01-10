@@ -46,7 +46,7 @@
     console.h2('Homework Task 12.01');
     // Points: 2
     // Please write an example of reading the 'src/app/data/config.json' file by absolute path, synchronously (!)
-
+//
 
     console.h2('Homework Task 12.02');
     // Points: 2
