@@ -46,13 +46,25 @@
     console.h2('Homework Task 12.01');
     // Points: 2
     // Please write an example of reading the 'src/app/data/config.json' file by absolute path, synchronously (!)
-//
+    let myPath = './src/app/data/config.json';
+    fs.readFileSync(myPath,function (err, data) {
+        if (err) {
+            return console.log('Data load error: ', err);
+        }
+        console.log(data);
+    });
 
     console.h2('Homework Task 12.02');
     // Points: 2
     // Please write an example of reading the 'src/app/data/config.json' file by relative path, asynchronously
     // Tip: you may need 'path' module for it, see above
 
+    fs.readFile(myPath,function (err, data) {
+        if (err) {
+            return console.log('Data load error: ', err);
+        }
+        console.log(data);
+    });
 
     console.h2('Homework Task 12.03');
     // Points: 4
